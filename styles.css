@@ -120,11 +120,13 @@ p {
 }
 
 .team {
-    
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--white);
 }
 
 footer {
     width: 100vw;
-    height: 10vh;
+    height: 400px;
     background-color: var(--yellow);
 }
