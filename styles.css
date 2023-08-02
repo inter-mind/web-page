@@ -4,14 +4,127 @@
     --white: #FFFFFF;
     --blue: #8ACFD8;
 }
-body {
+
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+body {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    
  }
 
 header {
     width: 100vw;
     height: 10vh;
     background-color: var(--purple);
+    border-bottom-left-radius: 50px;
+
+    display: flex;
+    flex-direction: row;
+
+
+}
+
+nav {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+    margin-right: 24px;
+
+    
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--white);
+}
+
+
+main {
+    background-color: var(--white);
+    border-top-right-radius: 50px;
+    z-index: 0;
+    
+    width: 100vw;
+    min-height: 80vh;
+
+    padding-top: 100px;
+}
+
+.slogan {
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.slogan > .content {
+    width: 60%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+
+}
+
+
+
+
+h1 {
+    font-size: 128px;
+}
+
+p {
+    width: 80%;
+}
+
+.purple {
+    color: var(--purple)
+}
+
+.yellow {
+    color: var(--yellow)
+}
+
+.image {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image > img {
+    width: 600px;
+}
+
+.whoWeAre {
+    margin-top: 100px;
+    background-color: var(--blue);
+    width: 100vw;
+    height: 400px;
+}
+
+.team {
+    
+}
+
+footer {
+    width: 100vw;
+    height: 10vh;
+    background-color: var(--yellow);
 }
