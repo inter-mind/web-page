@@ -24,6 +24,9 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
 header {
   width: 100%;
   height: 15vh;
@@ -181,8 +184,18 @@ main {
   background-color: var(--blue);
   width: 100%;
   height: 50vh;
+  padding: 32px;
 }
 
+.banner > div > h1 {
+  font-weight: 800;
+  font-size: 80px;
+}
+
+.banner > div > p {
+  font-weight: 600;
+  font-size: 30px;
+}
 .team {
   width: 100%;
   height: 110vh;
@@ -291,9 +304,18 @@ main {
 
 .achievement {
   width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items:  center ;
+  
   
   
 }
+
+.achievement > p {
+  width: 40vw;
+}
+
 
 .achievement > img {
   height: 100px;
