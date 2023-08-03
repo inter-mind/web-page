@@ -18,31 +18,44 @@ body {
   justify-content: space-between;
 }
 
+a {
+  text-decoration: none;
+}
+
 header {
   width: 100%;
   height: 15vh;
-  background-color: var(--purple);
-  border-bottom-left-radius: 50px;
 
   display: flex;
   flex-direction: row;
 }
 
-nav {
-  width: 98.9vw;
+header > nav {
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   gap: 75px;
-  margin-right: 24px;
+  padding: 24px;
+  border-bottom-left-radius: 50px;
+
+  background-color: var(--purple);
+  z-index: 1;
 }
 
-a {
+header > nav > a {
   text-decoration: none;
   color: var(--white);
   font-weight: 800;
   font-size: 20px;
+}
+
+header > img {
+  position: absolute;
+  top: calc(15vh - 70px);
+  right: 0;
+  z-index: 0;
 }
 
 main {
@@ -55,7 +68,7 @@ main {
 }
 
 #desktop-1 {
-  height: 90vh;
+  height: 85vh;
 }
 
 .slogan {
@@ -80,7 +93,7 @@ main {
 }
 
 .text > h1 {
-  font-size: 96px;
+  font-size: 90px;
   line-height: 100px;
 }
 
@@ -123,21 +136,152 @@ main {
   bottom: 0;
 }
 
-.whoWeAre {
-  margin-top: 100px;
+#media {
+  width: 200px;
+  right: 2vw;
+  bottom: 2vh;
+  position: absolute;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#media a {
+  width: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#media a img#instagram {
+  margin-top: 7px;
+  width: 50px;
+}
+
+#media a img#at {
+  width: 60px;
+}
+
+#media a img#twitter {
+  width: 60px;
+}
+
+#media a .contact {
+  width: 0;
+  background-color: white;
+  border-radius: 10px;
+  color: var(--blue);
+  text-align: center;
+}
+
+.banner {
   background-color: var(--blue);
-  width: 98.9vw;
-  height: 400px;
+  width: 100%;
+  height: 50vh;
 }
 
 .team {
-  width: 98.9vw;
-  height: 10vh;
+  width: 100%;
+  height: 110vh;
   background-color: var(--white);
+  display: flex;
+  flex-direction: row;
+}
+
+#downcurve {
+  position: absolute;
+  top: 150vh;
+}
+
+.logo-team {
+  width: 37.5%;
+
+  margin-top: 5%;
+
+  display: flex;
+}
+
+.the-team {
+  margin-top: 10vh;
+  margin-left: 30px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.the-team > h2 {
+  font-weight: 800;
+  font-size: 80px;
+}
+
+.members {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.member {
+  margin-top: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.member-photo {
+  width: 150px;
+  height: 150px;
+
+  margin-bottom: 10px;
+
+  border-radius: 150px;
+
+  background-color: var(--blue);
+}
+
+.member-name {
+  font-size: 14pt;
+  font-weight: 700;
+}
+
+.member-role {
+  font-weight: 600;
+  font-size: 12pt;
 }
 
 footer {
-  width: 98.9vw;
-  height: 400px;
+  width: 100%;
+  height: 50vh;
+}
+
+#yellow-curve {
+  position: absolute;
+  height: 70;
+}
+
+#fill {
+  margin-top: 70px;
+  width: 100%;
+  height: 100%;
   background-color: var(--yellow);
+  border-top-right-radius: 70px;
+  background-image: url("./assets/stripes.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0px -10vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#fill > h1 {
+  margin-top: 35px;
+  text-align: center;
+  text-shadow: -2px 0 var(--yellow), 0 2px var(--yellow), 2px 0 var(--yellow),
+    0 -2px var(--yellow);
+  font-size: 60pt;
+  font-weight: 900;
 }
