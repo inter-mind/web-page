@@ -1,5 +1,5 @@
 import anime from "./anime-master/lib/anime.es.js";
-
+let y = 0;
 const insta = document.getElementById("instagram-link");
 const email = document.getElementById("email-link");
 const x = document.getElementById("twitter-link");

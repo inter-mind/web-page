@@ -35,6 +35,9 @@ header {
 
   display: flex;
   flex-direction: row;
+  top: 0;
+  position: fixed;
+  z-index: 1;
 }
 
 header > nav {
@@ -60,9 +63,9 @@ header > nav > a {
 
 header > img {
   position: absolute;
-  top: calc(15vh - 70px);
+  top: 15vh;
   right: 0;
-  z-index: 0;
+  z-index: 2;
 }
 
 main {
@@ -75,7 +78,9 @@ main {
 }
 
 #desktop-1 {
+  margin-top: 15vh;
   height: 85vh;
+  z-index: 0;
 }
 
 .slogan {
@@ -129,10 +134,12 @@ main {
   display: flex;
   align-items: end;
   justify-content: end;
+  z-index: 0;
 }
 
 .image > img {
   height: 84vh;
+  z-index: 1;
 }
 
 .curve {
@@ -340,35 +347,6 @@ img#knowledge {
   top: 360vh;
   transform: scaleX(-1);
 }
-/*
-.achievements {
-  width: 100%;
-
-  background-color: var(--yellow);
-
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  gap: 32px;
-}
-
-
-
-
-
-.achievement > h3 {
-  font-size: 40px;
-}
-
-
-
-
-.info {
-  font-weight: 600;
-  font-size: 32px;
-}
-
-*/
 
 #project {
   margin-top: 15vh;
