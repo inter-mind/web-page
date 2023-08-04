@@ -3,7 +3,7 @@
   --yellow: #fad138;
   --white: #ffffff;
   --blue: #8acfd8;
-  --green: #A5EEA0;
+  --green: #a5eea0;
   --nunito: "Nunito", sans-serif;
 }
 
@@ -12,7 +12,9 @@
   margin: 0;
   padding: 0;
 }
-html{scroll-behavior:smooth}
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: var(--nunito);
   display: flex;
@@ -39,14 +41,14 @@ header > nav {
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: center;
   gap: 75px;
-  padding: 24px;
+  padding: 45px;
   border-bottom-left-radius: 50px;
 
   background-color: var(--purple);
-  z-index: 1;
+  z-index: 3;
 }
 
 header > nav > a {
@@ -107,7 +109,7 @@ main {
 
   margin-left: 4px;
 
-  font-size: 40px;
+  font-size: 24pt;
   font-weight: 700;
 }
 
@@ -142,59 +144,80 @@ main {
 }
 
 #media {
-  width: 200px;
-  right: 2vw;
-  bottom: 2vh;
-  position: absolute;
   display: inline-flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: auto;
 }
 
 #media a {
-  width: 60px;
+  margin-top: 18px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 #media a img#instagram {
-  margin-top: 7px;
-  width: 50px;
+  display: flex;
+  width: 43px;
 }
 
 #media a img#at {
-  width: 60px;
+  width: 50px;
 }
 
 #media a img#twitter {
-  width: 60px;
+  width: 50px;
 }
 
 #media a .contact {
   width: 0;
+  padding: 0;
   background-color: white;
   border-radius: 10px;
   color: var(--blue);
+  font-size: 10pt;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  margin-top: 2px;
 }
 
 .banner {
   background-color: var(--blue);
   width: 100%;
-  height: 50vh;
-  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 60vh;
 }
 
-.banner > div > h1 {
-  font-weight: 800;
-  font-size: 80px;
+img#mental-health {
+  position: absolute;
+  top: 133vh;
+  width: 20vw;
+  z-index: 1;
 }
 
-.banner > div > p {
-  font-weight: 600;
-  font-size: 30px;
+img#knowledge {
+  position: absolute;
+  right: 1vw;
+  top: 83vh;
+  width: 18vw;
+  z-index: 1;
+}
+
+.banner > p {
+  color: var(--white);
+  font-size: 20pt;
+  width: 60%;
+  text-align: center;
 }
 .team {
   width: 100%;
@@ -206,7 +229,7 @@ main {
 
 #downcurve {
   position: absolute;
-  top: 150vh;
+  top: 160vh;
 }
 
 .logo-team {
@@ -267,23 +290,17 @@ main {
 }
 
 .achievements {
-  width: 100vw;
-  
+  width: 100%;
+
   background-color: var(--yellow);
-  
 
   display: flex;
   flex-direction: column;
   text-align: center;
   gap: 32px;
-  
-
-  
-  
 }
 
 .achievements > h1 {
-  
   font-weight: 800;
   font-size: 80px;
 }
@@ -292,30 +309,22 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  
 }
 
 .achievement > h3 {
-  
   font-size: 40px;
 }
-
-
 
 .achievement {
   width: 50vw;
   display: flex;
   flex-direction: column;
-  align-items:  center ;
-  
-  
-  
+  align-items: center;
 }
 
 .achievement > p {
   width: 40vw;
 }
-
 
 .achievement > img {
   height: 100px;
@@ -325,7 +334,7 @@ main {
   font-weight: 500;
   font-size: 24px;
 }
-.info  {
+.info {
   font-weight: 600;
   font-size: 32px;
 }

@@ -1,15 +1,15 @@
 import anime from "./anime-master/lib/anime.es.js";
 
-const insta = document.getElementById("instagram");
-const email = document.getElementById("at");
-const x = document.getElementById("twitter");
+const insta = document.getElementById("instagram-link");
+const email = document.getElementById("email-link");
+const x = document.getElementById("twitter-link");
 
 insta.addEventListener("mouseenter", () => {
   anime({
     targets: "#insta",
     width: "130px",
-    padding: "10px",
-    color: "black",
+    padding: "5px",
+    color: "#000000",
 
     duration: 1000,
   });
@@ -21,8 +21,7 @@ insta.addEventListener("mouseleave", () => {
     width: "0",
     padding: "0",
 
-    color: "none",
-    duration: 300,
+    color: "rgba(255, 255, 255, 0)  ",
     easing: "easeInOutExpo",
   });
 });
@@ -30,9 +29,9 @@ insta.addEventListener("mouseleave", () => {
 email.addEventListener("mouseenter", () => {
   anime({
     targets: "#email",
-    width: "130px",
-    padding: "10px",
-    color: "black",
+    width: "180px",
+    padding: "5px",
+    color: "#000000",
 
     duration: 1000,
   });
@@ -44,31 +43,29 @@ email.addEventListener("mouseleave", () => {
     width: "0",
     padding: "0",
 
-    color: "none",
-    duration: 300,
+    color: "rgba(255, 255, 255, 0)  ",
     easing: "easeInOutExpo",
   });
 });
 
-x.addEventListener("mouseenter", () => {
+x.addEventListener("mouseover", () => {
   anime({
     targets: "#x",
     width: "130px",
-    padding: "10px",
-    color: "black",
+    padding: "5px",
+    color: "#000000",
 
     duration: 1000,
   });
 });
 
-x.addEventListener("mouseleave", () => {
+x.addEventListener("mouseout", () => {
   anime({
     targets: "#x",
-    width: "0",
-    padding: "0",
+    width: "0px",
+    padding: "0px",
+    color: "rgba(255, 255, 255, 0)  ",
 
-    color: "none",
-    duration: 300,
     easing: "easeInOutExpo",
   });
 });
