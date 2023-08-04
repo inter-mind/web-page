@@ -272,7 +272,7 @@ img#knowledge {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 }
 
 .member-photo {
@@ -284,16 +284,50 @@ img#knowledge {
   border-radius: 150px;
 
   background-color: var(--blue);
+  background-size: cover;
+}
+
+.member-photo#caua {
+  background-image: url("./assets/caua.jpg");
+}
+
+.member-photo#dalila {
+  background-image: url("./assets/dalila.jpg");
+}
+
+.member-photo#igor {
+  background-image: url("./assets/igor.jpg");
+}
+
+.member-photo#joao {
+  background-image: url("./assets/joao.jpg");
+}
+
+.member-photo#mateus {
+  background-image: url("./assets/mateus.png");
+}
+.member-photo#rafao {
+  background-image: url("./assets/rafao.jpg");
+}
+
+.member-photo#sara {
+  background-image: url("./assets/sara.jpg");
+}
+
+.member-photo#thauany {
+  background-image: url("./assets/thauany.jpg");
 }
 
 .member-name {
   font-size: 14pt;
   font-weight: 700;
+  text-align: center;
 }
 
 .member-role {
   font-weight: 600;
   font-size: 12pt;
+  text-align: center;
 }
 
 #curve-2 {
