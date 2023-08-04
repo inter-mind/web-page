@@ -69,3 +69,34 @@ x.addEventListener("mouseout", () => {
     easing: "easeInOutExpo",
   });
 });
+
+const obt = document.querySelector("#obt");
+const dlj = document.querySelector("#dlj");
+
+obt.addEventListener("mouseenter", (e) => {
+  anime({
+    targets: e.target,
+    scale: 1.2,
+  });
+});
+
+obt.addEventListener("mouseleave", (e) => {
+  anime({
+    targets: e.target,
+    scale: 1,
+  });
+});
+
+dlj.addEventListener("mouseenter", (e) => {
+  anime({
+    targets: e.target,
+    scale: 1.2,
+  });
+});
+
+dlj.addEventListener("mouseleave", (e) => {
+  anime({
+    targets: e.target,
+    scale: 1,
+  });
+});
