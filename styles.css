@@ -14,12 +14,15 @@
 }
 html {
   scroll-behavior: smooth;
+  font-size: 10px;
 }
 body {
   font-family: var(--nunito);
   display: flex;
+  width: 100vw;
   flex-direction: column;
   justify-content: space-between;
+  overflow-x: hidden; /* Hide scrollbars */
 }
 
 a {
@@ -28,6 +31,10 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+h2 {
+  font-size: calc(3rem + 3vw);
 }
 header {
   width: 100%;
@@ -46,8 +53,9 @@ header > nav {
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  gap: 75px;
-  padding: 45px;
+  gap: calc(20px + 3vw);
+  padding: 0 45px;
+  height: 15;
   border-bottom-left-radius: 50px;
 
   background-color: var(--purple);
@@ -58,7 +66,7 @@ header > nav > a {
   text-decoration: none;
   color: var(--white);
   font-weight: 800;
-  font-size: 20px;
+  font-size: calc(0.7rem + 1vw);
 }
 
 header > img {
@@ -69,12 +77,10 @@ header > img {
 }
 
 main {
-  background-color: var(--white);
   border-top-right-radius: 50px;
   z-index: 0;
 
-  width: 98.9vw;
-  min-height: 80vh;
+  width: 100vw;
 }
 
 #desktop-1 {
@@ -105,8 +111,8 @@ main {
 }
 
 .text > h1 {
-  font-size: 90px;
-  line-height: 100px;
+  font-size: calc(3rem + 3vw);
+  line-height: calc(5rem + 3vw);
 }
 
 .content > p {
@@ -129,8 +135,7 @@ main {
 }
 
 .image {
-  width: 40%;
-  height: 90vh;
+  width: 30vw;
   display: flex;
   align-items: end;
   justify-content: end;
@@ -138,13 +143,13 @@ main {
 }
 
 .image > img {
-  height: 84vh;
   z-index: 1;
+  width: 30vw;
 }
 
 .curve {
   height: 30vh;
-  width: 100%;
+  width: 100vw;
   position: absolute;
 
   bottom: 0;
@@ -169,15 +174,15 @@ main {
 
 #media a img#instagram {
   display: flex;
-  width: 43px;
+  width: 6vh;
 }
 
 #media a img#at {
-  width: 50px;
+  width: 7vh;
 }
 
 #media a img#twitter {
-  width: 50px;
+  width: 7vh;
 }
 
 #media a .contact {
@@ -197,7 +202,7 @@ main {
 
 .banner {
   background-color: var(--blue);
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -210,11 +215,14 @@ img#mental-health {
   top: 133vh;
   width: 20vw;
   z-index: 1;
+  max-width: 250px;
 }
 
 img#knowledge {
   position: absolute;
-  right: 1vw;
+  right: 2vw;
+  max-width: 250px;
+
   top: 83vh;
   width: 18vw;
   z-index: 1;
@@ -222,7 +230,8 @@ img#knowledge {
 
 .banner > p {
   color: var(--white);
-  font-size: 20pt;
+  font-size: calc(1rem + 1.2vw);
+
   width: 60%;
   text-align: center;
 }
@@ -250,25 +259,25 @@ img#knowledge {
 .the-team {
   margin-top: 10vh;
   margin-left: 30px;
-  flex: 1;
+
+  width: 70%;
   display: flex;
   flex-direction: column;
 }
 
 .the-team > h2 {
   font-weight: 800;
-  font-size: 60pt;
 }
 
 .members {
   display: grid;
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  padding-right: 10px;
 }
 
 .member {
   margin-top: 30px;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -276,8 +285,8 @@ img#knowledge {
 }
 
 .member-photo {
-  width: 150px;
-  height: 150px;
+  width: 10vw;
+  height: 10vw;
 
   margin-bottom: 10px;
 
@@ -319,14 +328,14 @@ img#knowledge {
 }
 
 .member-name {
-  font-size: 14pt;
+  font-size: calc(0.5rem + 1vw);
   font-weight: 700;
   text-align: center;
 }
 
 .member-role {
   font-weight: 600;
-  font-size: 12pt;
+  font-size: calc(0.5rem + 0.9vw);
   text-align: center;
 }
 
@@ -337,17 +346,18 @@ img#knowledge {
 
 .achievements {
   margin-top: 30vh;
-  height: 60vh;
+  height: 62vh;
+  width: 100%;
   background-color: var(--blue);
+  width: 100vw;
 
   display: flex;
   flex-direction: column;
   text-align: center;
 }
 
-.achievements > h1 {
+.achievements > h2 {
   font-weight: 800;
-  font-size: 48pt;
   color: var(--white);
 }
 
@@ -358,27 +368,27 @@ img#knowledge {
 }
 
 .achievement {
-  width: 50vw;
+  width: 60%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .achievement > a > img {
-  height: 150px;
+  height: 10vw;
 }
 
 .achievement > p {
   width: 40vw;
   font-weight: 500;
-  font-size: 14pt;
+  font-size: calc(0.5rem + 0.8vw);
   text-align: center;
   color: var(--white);
   margin-top: 10px;
 }
 
 #downcurve-2 {
-  top: 360vh;
+  top: 362vh;
   transform: scaleX(-1);
 }
 
@@ -406,15 +416,14 @@ img#knowledge {
   color: #f5fefd;
 }
 
-#project #text h1 {
+#project #text h2 {
   display: flex;
   flex: 1;
-  font-size: 60pt;
   font-weight: 800;
 }
 
 #project #text p {
-  font-size: 16pt;
+  font-size: calc(1rem + 0.6vw);
   font-weight: 600;
 }
 
@@ -454,6 +463,6 @@ footer {
   text-align: center;
   text-shadow: -2px 0 var(--yellow), 0 2px var(--yellow), 2px 0 var(--yellow),
     0 -2px var(--yellow);
-  font-size: 60pt;
+  font-size: calc(4rem + 3vw);
   font-weight: 900;
 }
