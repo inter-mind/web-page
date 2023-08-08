@@ -41,7 +41,7 @@ h2 {
 
 header {
   width: 100%;
-  height: 15vh;
+  height: calc(var(--vh, 1vh) * 15);
 
   display: flex;
   flex-direction: row;
@@ -66,16 +66,62 @@ header > nav {
 
 header > nav > a {
   text-decoration: none;
-  color: var(--white);
+  color: var(--white );
   font-weight: 800;
   font-size: calc(0.7rem + 1vw);
 }
 
 header > img {
   position: absolute;
-  top: 15vh;
+  top: calc(var(--vh, 1vh) * 15);
   right: 0;
   z-index: 2;
+}
+
+
+#media {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: auto;
+}
+
+#media a {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+#media a img#instagram {
+  display: flex;
+  width: calc(var(--vh, 1vh) * 6);
+}
+
+#media a img#at {
+  width: calc(var(--vh, 1vh) * 7);
+}
+
+#media a img#twitter {
+  width: calc(var(--vh, 1vh) * 7);
+}
+
+#media a .contact {
+  width: 0;
+  padding: 0;
+  background-color: white;
+  border-radius: 10px;
+  color: var(--blue);
+  font-size: 10pt;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: transparent;
+  margin-top: 2px;
 }
 
 main {
@@ -86,14 +132,15 @@ main {
 }
 
 #desktop-1 {
-  margin-top: 15vh;
-  height: 85vh;
+  margin-top: calc(var(--vh, 1vh) * 15);
+  height: calc(var(--vh, 1vh) * 85);
   z-index: 0;
 }
 
+
 .slogan {
   width: 100%;
-  height: 85vh;
+  height: calc(var(--vh, 1vh) * 85);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -101,7 +148,7 @@ main {
 
 .slogan > .content {
   position: relative;
-  top: 15vh;
+  top: calc(var(--vh, 1vh) * 15);
 
   margin-left: 32px;
 
@@ -138,7 +185,7 @@ main {
 
 .image {
   width: 30vw;
-  height: 100%;
+  height: calc(var(--vh, 1vh) * 90);
   display: flex;
   align-items: end;
   justify-content: end;
@@ -146,76 +193,34 @@ main {
 }
 
 .image > img {
-  z-index: 1;
-  width: 65vh;
+  z-index: 2;
+  width: calc(var(--vh, 1vh) * 65);
 }
 
 .curve {
-  height: 30vh;
+  height: calc(var(--vh, 1vh) * 30);
   width: 100vw;
   position: absolute;
 
   bottom: 0;
 }
 
-#media {
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-left: auto;
-}
-
-#media a {
-  margin-top: 18px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin-right: 5px;
-  margin-left: 5px;
-}
-
-#media a img#instagram {
-  display: flex;
-  width: 6vh;
-}
-
-#media a img#at {
-  width: 7vh;
-}
-
-#media a img#twitter {
-  width: 7vh;
-}
-
-#media a .contact {
-  width: 0;
-  padding: 0;
-  background-color: white;
-  border-radius: 10px;
-  color: var(--blue);
-  font-size: 10pt;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: transparent;
-  margin-top: 2px;
-}
 
 .banner {
+  margin:0;
   background-color: var(--blue);
   width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 60vh;
+  height: calc(var(--vh, 1vh) * 60);
+  z-index: 0;
 }
 
 img#mental-health {
   position: absolute;
-  top: 133vh;
+  top: calc(var(--vh, 1vh) * 133);
   width: 20vw;
   z-index: 1;
   max-width: 250px;
@@ -226,7 +231,7 @@ img#knowledge {
   right: 2vw;
   max-width: 250px;
 
-  top: 83vh;
+  top: calc(var(--vh, 1vh) * 83);
   width: 18vw;
   z-index: 1;
 }
@@ -240,7 +245,7 @@ img#knowledge {
 }
 .team {
   width: 100%;
-  height: 110vh;
+  height: calc(var(--vh, 1vh) * 110);
   background-color: var(--white);
   display: flex;
   flex-direction: row;
@@ -248,7 +253,7 @@ img#knowledge {
 
 #downcurve {
   position: absolute;
-  top: 160vh;
+  top: calc(var(--vh, 1vh) * 160)
 }
 
 .logo-team {
@@ -260,7 +265,7 @@ img#knowledge {
 }
 
 .the-team {
-  margin-top: 10vh;
+  margin-top: calc(var(--vh, 1vh) * 10);
   margin-left: 30px;
 
   width: 70%;
@@ -343,13 +348,13 @@ img#knowledge {
 }
 
 #curve-2 {
-  top: 270vh;
+  top: calc(var(--vh, 1vh) * 270);
   transform: scaleX(-1);
 }
 
 .achievements {
-  margin-top: 30vh;
-  height: 62vh;
+  margin-top: calc(var(--vh, 1vh) * 30);
+  height: calc(var(--vh, 1vh) * 62);
   width: 100%;
   background-color: var(--blue);
   width: 100vw;
@@ -397,15 +402,15 @@ img#knowledge {
 }
 
 #downcurve-2 {
-  top: 362vh;
+  top: calc(var(--vh, 1vh) * 362);
   transform: scaleX(-1);
 }
 
 #project {
-  margin-top: 15vh;
+  margin-top: calc(var(--vh, 1vh) * 15);
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: calc(var(--vh, 1vh) * 80);
   justify-content: center;
 }
 
@@ -443,7 +448,7 @@ img#knowledge {
 
 footer {
   width: 100%;
-  height: 50vh;
+  height: calc(var(--vh, 1vh) * 50);
   z-index: 1;
 }
 
@@ -462,7 +467,7 @@ footer {
   background-image: url("./assets/stripes.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0px -10vh;
+  background-position: 0px -calc(var(--vh, 1vh) * 10);
 
   display: flex;
   align-items: center;
