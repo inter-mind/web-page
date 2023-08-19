@@ -51,7 +51,7 @@ header {
 }
 
 header > nav {
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -62,11 +62,12 @@ header > nav {
 
   background-color: var(--purple);
   z-index: 3;
+  overflow-x: hidden; /* Hide scrollbars */
 }
 
 header > nav > a {
   text-decoration: none;
-  color: var(--white );
+  color: var(--white);
   font-weight: 800;
   font-size: calc(0.7rem + 1vw);
 }
@@ -74,10 +75,9 @@ header > nav > a {
 header > img {
   position: absolute;
   top: calc(var(--vh, 1vh) * 15);
-  right: 0;
+  left: calc(100vw - 70px);
   z-index: 2;
 }
-
 
 #media {
   display: inline-flex;
@@ -136,7 +136,6 @@ main {
   height: calc(var(--vh, 1vh) * 85);
   z-index: 0;
 }
-
 
 .slogan {
   width: 100%;
@@ -205,9 +204,8 @@ main {
   bottom: 0;
 }
 
-
 .banner {
-  margin:0;
+  margin: 0;
   background-color: var(--blue);
   width: 100vw;
   display: flex;
@@ -243,6 +241,7 @@ img#knowledge {
   width: 60%;
   text-align: center;
 }
+
 .team {
   width: 100%;
   height: calc(var(--vh, 1vh) * 110);
@@ -253,7 +252,7 @@ img#knowledge {
 
 #downcurve {
   position: absolute;
-  top: calc(var(--vh, 1vh) * 160)
+  top: calc(var(--vh, 1vh) * 160);
 }
 
 .logo-team {
@@ -355,7 +354,6 @@ img#knowledge {
 .achievements {
   margin-top: calc(var(--vh, 1vh) * 30);
   height: calc(var(--vh, 1vh) * 62);
-  width: 100%;
   background-color: var(--blue);
   width: 100vw;
 
@@ -454,7 +452,6 @@ footer {
 
 #yellow-curve {
   position: absolute;
-  height: 70;
 }
 
 #fill {
@@ -467,7 +464,7 @@ footer {
   background-image: url("./assets/stripes.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 0px -calc(var(--vh, 1vh) * 10);
+  background-position: 0px calc(var(--vh, 1vh) * 10);
 
   display: flex;
   align-items: center;
@@ -481,4 +478,293 @@ footer {
     0 -2px var(--yellow);
   font-size: calc(4rem + 3vw);
   font-weight: 900;
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    overflow-x: hidden;
+  }
+  header > nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+  }
+
+  header > nav > a {
+    text-align: center;
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 800;
+    font-size: calc(0.7rem + 1vw);
+  }
+
+  #media {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #media a {
+    width: 1px;
+    height: 1px;
+    margin-right: 5px;
+    margin-left: 5px;
+  }
+
+  #media a img#instagram {
+    display: flex;
+    width: 2vh;
+  }
+
+  #media a img#at {
+    width: 2.5vh;
+  }
+
+  #media a img#twitter {
+    width: 2.5vh;
+  }
+
+  #media a .contact {
+    width: 0;
+    padding: 0;
+    background-color: white;
+    border-radius: 10px;
+    color: var(--blue);
+    font-size: 10pt;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;
+    margin-top: 2px;
+  }
+
+  header > img {
+    position: absolute;
+    right: 0;
+    z-index: 2;
+  }
+
+  .image {
+    width: 30vw;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    z-index: 0;
+  }
+
+  .image > img {
+    z-index: 1;
+    width: calc(var(--vh, 1vh) * 35);
+  }
+
+  .slogan > .content {
+    margin-left: 20px;
+  }
+
+  .content .text {
+    width: 95vw;
+  }
+
+  .content > p {
+    width: 60vw;
+    font-size: calc(0.5rem + 2.5vw);
+  }
+  .text > h1 {
+    font-size: calc(3rem + 3vw);
+    line-height: calc(4rem + 2vw);
+  }
+
+  .curve {
+    top: calc(var(--vh, 1vh) * 100 - var(--vh, 1vh) * 30);
+  }
+
+  .banner {
+    height: calc(var(--vh, 1vh) * 40);
+        margin-bottom: calc(var(--vh, 1vh) * 5);
+
+  }
+
+  .banner > p {
+    font-size: calc(1rem + 1.2vw);
+
+    width: 90%;
+  }
+
+  img#mental-health {
+    top: calc(var(--vh, 1vh) * 135);
+    width: 32vw;
+    max-width: 250px;
+  }
+
+  img#knowledge {
+    top: calc(var(--vh, 1vh) * 90);
+    width: 27vw;
+  }
+
+  #downcurve {
+    position: absolute;
+    top: calc(var(--vh, 1vh) * 140);
+  }
+
+  .team {
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 68.25);
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .logo-team {
+    align-self: flex-start;
+    width: calc(var(--vh, 1vh) * 35);
+    display: none;
+  }
+
+  .the-team {
+    width: 100%;
+    margin-top: calc(var(--vh, 1vh) * 10);
+    margin-left: 0px;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+  }
+
+  .the-team > h2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  .members {
+    padding-right: 0px;
+    height: calc(var(--vh, 1vh) * 35);
+  }
+
+  .member {
+    margin-top: 10px;
+  }
+
+  .member-photo {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  #curve-2 {
+    top: calc(var(--vh, 1vh) * 205);
+  }
+
+  .achievements {
+    margin-top: calc(var(--vh, 1vh) * 21.2);
+    height: calc(var(--vh, 1vh) * 70);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .achievements > h2 {
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: calc(var(--vh, 1vh) * 1);
+  }
+
+  .achievements > .achContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .achievement {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .achievement > a > img {
+    margin-top: calc(var(--vh, 1vh) * 2);
+    height: 25vw;
+  }
+
+  .achievement > p {
+    width: 85%;
+    font-size: calc(0.9rem + 0.5vw);
+    margin-top: 0px;
+  }
+
+  #downcurve-2 {
+    top: calc(var(--vh, 1vh) * 304.3);
+  }
+
+  #project {
+    margin-top: calc(var(--vh, 1vh) * 2);
+    display: flex;
+    flex-direction: column;
+    height: calc(var(--vh, 1vh) * 80);
+    justify-content: center;
+  }
+
+  #project div#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(var(--vh, 1vh) * 80);
+  }
+
+  #project div#text {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--green);
+    padding: 64px 16px 32px 16px;
+    border-radius: 0 0 100px 100px;
+    text-align: center;
+  }
+
+  #project #text h2 {
+    display: flex;
+    flex: 1;
+    font-weight: 800;
+    text-align: center;
+  }
+
+  #project #text p {
+    font-size: calc(1rem + 0.6vw);
+    font-weight: 600;
+  }
+
+  #project div#content img {
+    height: 100%;
+    z-index: -1;
+  }
+
+  footer {
+    margin-top: 0px;
+    height: calc(var(--vh, 1vh) * 35);
+    background-color: var(--yellow);
+    background-image: url("./assets/stripes.svg");
+    background-repeat: no-repeat;
+    background-size: 100vw calc(var(--vh, 1vh) * 105);
+    background-position: center;
+    border-top-right-radius: 70px;
+  }
+  #fill {
+    margin-top: 0px;
+  }
+  #yellow-curve {
+    z-index: 2;
+    top: calc(var(--vh, 1vh) * 375.9);
+  }
+
+  #fill h1 {
+    margin-top: 0;
+    font-size: calc(2rem + 3vw);
+  }
 }
