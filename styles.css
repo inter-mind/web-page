@@ -617,7 +617,6 @@ footer {
     height: calc(var(--vh, 1vh) * 68.25);
     flex-direction: column-reverse;
     align-items: center;
-    background-color: blue;
   }
 
   .logo-team {
