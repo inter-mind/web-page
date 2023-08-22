@@ -617,6 +617,7 @@ footer {
     height: calc(var(--vh, 1vh) * 68.25);
     flex-direction: column-reverse;
     align-items: center;
+    background-color: blue;
   }
 
   .logo-team {
@@ -649,8 +650,8 @@ footer {
   }
 
   .member-photo {
-    width: 20vw;
-    height: 20vw;
+    width: calc(var(--vh, 1vh) * 10);
+    height: calc(var(--vh, 1vh) * 10);
   }
 
   #curve-2 {
@@ -702,29 +703,33 @@ footer {
   }
 
   #project {
-    margin-top: calc(var(--vh, 1vh) * 2);
+    margin-top: 0;
     display: flex;
     flex-direction: column;
-    height: calc(var(--vh, 1vh) * 80);
+    height: calc(var(--vh, 1vh) * 90);
     justify-content: center;
   }
 
   #project div#content {
+        padding-top: calc(var(--vh, 1vh) * 1);
+
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: calc(var(--vh, 1vh) * 80);
+    height: 100%;
   }
 
   #project div#text {
     width: 70vw;
+    height: calc(var(--vh, 1vh) * 60);
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: var(--green);
-    padding: 64px 16px 32px 16px;
+    padding: 64px 16px 24px 16px;
     border-radius: 0 0 100px 100px;
+    justify-content: flex-end;
     text-align: center;
   }
 
@@ -741,28 +746,16 @@ footer {
   }
 
   #project div#content img {
-    height: 100%;
+    width: calc(var(--vh, 1vh) * 30);
     z-index: -1;
   }
 
   footer {
-    margin-top: 0px;
     height: calc(var(--vh, 1vh) * 35);
-    background-color: var(--yellow);
-    background-image: url("./assets/stripes.svg");
-    background-repeat: no-repeat;
-    background-size: 100vw calc(var(--vh, 1vh) * 105);
-    background-position: center;
-    border-top-right-radius: 70px;
-  }
-  #fill {
-    margin-top: 0px;
-  }
-  #yellow-curve {
-    z-index: 2;
-    top: calc(var(--vh, 1vh) * 375.9);
-  }
 
+  }
+  
+  
   #fill h1 {
     margin-top: 0;
     font-size: calc(2rem + 3vw);
